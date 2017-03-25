@@ -1,0 +1,15 @@
+networks: {}
+version: '3'
+services:
+  rabbit:
+    restart: always
+    hostname: rabbit
+    build: .
+    image: dgnest/rabbit:3.6.0
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=mypass
+      - RABBITMQ_DEFAULT_VHOST=vhost
+      - RABBITMQ_TEST_USER=rabbit_test
+      - RABBITMQ_TEST_PASS=rabbit
+      - RABBITMQ_TEST_VHOST=vhost_test
