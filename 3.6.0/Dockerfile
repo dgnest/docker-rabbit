@@ -4,6 +4,5 @@ MAINTAINER Luis Mayta <@slovacus>
 ONBUILD RUN mkdir -p /docker-entrypoint-init.d
 
 # Custom initialization scripts
-COPY ./docker/sh/*.sh   /docker-entrypoint-init.d/
-
-# ENTRYPOINT ["/docker-entrypoint-init.d/create_user.sh"]
+COPY ./create_user.sh /docker-entrypoint-init.d/
+COPY ./create_vhost.sh /docker-entrypoint-init.d/
