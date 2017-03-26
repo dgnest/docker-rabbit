@@ -1,7 +1,7 @@
 FROM rabbitmq:3.6.0-management
 MAINTAINER Luis Mayta <@slovacus>
 
-ONBUILD RUN mkdir -p /docker-entrypoint-init.d
+RUN mkdir -p /docker-entrypoint-init.d
 
 # Custom initialization scripts
 COPY ./create_user.sh /docker-entrypoint-init.d/
