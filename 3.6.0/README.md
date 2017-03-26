@@ -1,4 +1,4 @@
-# Docker docker-rabbit
+# dgnest/rabbit:3.6.0
 
 [![Build Status](https://travis-ci.org/dgnest/docker-rabbit.svg)](https://travis-ci.org/dgnest/docker-rabbit)
 [![GitHub issues](https://img.shields.io/github/issues/dgnest/docker-rabbit.svg)](https://github.com/dgnest/docker-rabbit/issues)
@@ -18,6 +18,12 @@ none
 
 MIT
 
+## Usage
+
+In order to run a basic container capable of serving a PostGIS-enabled database, start a container as follows:
+
+    docker run -P --name rabbit -e RABBITMQ_TEST_PASS=mysecretpassword dgnest/rabbit
+
 ## Environment Variables
 
 This is a list of the available environment variables which can be set at runtime using -e KEY=value.
@@ -29,14 +35,6 @@ For example, to change the default password you can issue `docker run -P --name 
 * `RABBITMQ_TEST_USER`: A test superuser role. default: `rabbit_test`
 * `RABBITMQ_TEST_PASS`: The password for the user test. default: `rabbit`
 * `RABBITMQ_TEST_VHOST`: Name of vhost to create. default: `vhost_test`
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
